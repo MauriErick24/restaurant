@@ -78,8 +78,7 @@ class Ordenar extends Component {
   //! Check this hard reload. It's getting the information from the database again.
 
   resetState = () => {
-    alert("Pedido creado")
-      
+    window.location.reload();
   }
   // navigate('/carrito')
   // const navigate = useNavigate();
