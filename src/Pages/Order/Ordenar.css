@@ -1,0 +1,62 @@
+#full-content{
+    align-items: center;
+}
+#order-button-space{
+    position: fixed; /* Hace que el Navbar sea fijo */
+    width: 100%; /* Ajusta el ancho al 100% del viewport */
+    background-color: none; /* Estilo de fondo del Navbar */
+    padding: 10px 0; /* Espaciado interno superior e inferior */
+    z-index: 1000; /* Z-index para asegurar que esté por encima de otros elementos */
+    /* Otros estilos de diseño, como altura, alineación de texto, etc. */
+}
+
+#order-button{
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    font-size:x-large;
+    background-color: greenyellow;
+    width: 200px;
+}
+
+#order-button:hover{
+    cursor: pointer;
+    background-color: rgba(172, 255, 47, 0.759);
+}
+
+#order-button:active{
+    background-color: rgba(172, 255, 47, 0.54);
+}
+
+
+#new-order-button{
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    font-size:x-large;
+    background-color: rgb(235, 101, 101);
+    width: 200px;
+    margin-right: 20px;
+}
+
+#new-order-button:hover{
+    cursor: pointer;
+    background-color:  rgba(235, 101, 101, 0.792);
+    width: 200px;
+}
+
+#new-order-button:active{
+    background-color: rgba(235, 101, 101, 0.505);
+    width: 200px;
+}
+
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Distribuye las tarjetas automáticamente */
+    gap: 5px; /* Espacio entre las tarjetas */
+  }
+
+  h1{
+    padding-top: 70px;
+  }

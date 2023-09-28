@@ -1,0 +1,43 @@
+.container-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:fit-content; /* Ajusta la altura según tus necesidades */
+  }
+  
+.column-inicio {
+      padding-top: 50px;
+      display: flex;
+      flex-wrap:inherit;
+      justify-content: center;
+      gap: 20px; /* Espacio entre las columnas */
+    }
+    
+.row-inicio {
+      flex: 1;
+      min-width: 80%; /* Ancho mínimo de cada columna */
+      padding: 50%;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      font-size: larger;
+    }
+.row-inicio:hover{
+    background-color: #007bff; 
+    color: #f0f0f0;
+    cursor: pointer;
+    
+}
+.row-inicio:active{
+    background-color: #007bff63; 
+}
+
+@media (max-width: 768px) {
+    .column-inicio {
+     flex-wrap: wrap;
+    }
+  }
+

@@ -1,0 +1,50 @@
+#box-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#box-card2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 50px;
+}
+
+#content-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+#btn-option{
+    border: none;
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#btn-option:hover{
+    cursor: pointer;
+    background-color: #007bff9f;
+}
+
+#btn-option:active{
+    background-color: #007bff40;
+}
+
+#title-card{
+    border: none;
+}
+#content-card{
+    border: none;
+    padding-bottom: 20px;
+}
+#price-card{
+    border: none;
+    padding-bottom: 20px;
+}

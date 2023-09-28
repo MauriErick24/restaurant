@@ -1,0 +1,26 @@
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    font-weight: bold;
+    min-width: 800px; /* Establece el tamaño mínimo deseado */ 
+}
+
+.table-cell {
+    flex: 1;
+    max-width: 85px;
+    padding: 10px;
+    text-align: center;
+}
+
+.order-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+      min-width: 800px; /* Establece el tamaño mínimo deseado */ 
+}
+
+/* Estilos adicionales según sea necesario para tu diseño */
+
+

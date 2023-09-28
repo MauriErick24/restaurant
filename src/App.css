@@ -1,38 +1,22 @@
 .App {
+  position: relative;  
   text-align: center;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+#navbar-main{
+  position: fixed; /* Hace que el Navbar sea fijo */
+  top: 0; /* Fija el Navbar en la parte superior de la ventana */
+  left: 0; /* Fija el Navbar en la parte izquierda de la ventana */
+  width: 100%; /* Ajusta el ancho al 100% del viewport */
+  background-color: #fff; /* Estilo de fondo del Navbar */
+  padding: 10px 0; /* Espaciado interno superior e inferior */
+  z-index: 1000; /* Z-index para asegurar que esté por encima de otros elementos */
+  /* Otros estilos de diseño, como altura, alineación de texto, etc. */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#content{
+  margin-top: 120px; /* Espacio superior para evitar que el contenido se solape con el Navbar */
+  /* Otros estilos de diseño para el contenido de la página */
 }

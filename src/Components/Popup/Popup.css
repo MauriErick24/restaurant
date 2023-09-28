@@ -1,0 +1,128 @@
+#client{
+  display:flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#total{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#space-accept button{
+  border-radius: 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+}
+
+#space-accept button:hover{
+  background-color: #007bffb6;
+  cursor: pointer;
+}
+
+#space-accept button:active{
+  background-color: #007bffb6;
+}
+
+#back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Asegura que el Popup esté encima del contenido */
+}
+
+#popup-container {
+  width: 350px; /* Tamaño fijo para el ancho */
+  height: 400px; /* Tamaño fijo para el alto */
+  overflow-y: scroll; /* Habilita el desplazamiento vertical si el contenido es demasiado largo */
+  background-color: #fff; /* Fondo blanco del Popup */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el Popup */
+}
+
+#popup-content {
+  padding: 10px; /* Espaciado interior del Popup */
+}
+
+#popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-bottom: 1px solid #ccc; /* Línea divisoria en la parte superior del contenido del Popup */
+  padding-bottom: 10px;
+}
+
+#popup-header p {
+  font-weight: bold;
+}
+
+#popup-header p {
+  margin: 0; /* Elimina el margen predeterminado de los párrafos */
+}
+
+#popup-body {
+  padding-top: 10px;
+  padding-bottom: 10px; /* Espaciado inferior del cuerpo del Popup */
+}
+
+#head {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Crea una cuadrícula con 4 columnas iguales */
+  font-weight: bold; /* Texto en negrita para encabezados */
+  margin-bottom: 10px; /* Espaciado inferior */
+  justify-content: space-between;
+}
+
+#head p {
+  text-align: center; /* Centra el texto en las celdas de la cuadrícula */
+}
+
+#head p:nth-child(3), #head p:nth-child(4) {
+  text-align: right; /* Alinea a la derecha las columnas "Cantidad" y "Subtotal" */
+}
+
+#head p:last-child {
+  text-align: center; /* Centra el texto en la última columna */
+}
+
+/* Estilos para los productos en la lista */
+#popup-body > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 10px;
+}
+
+#popup-body > div p {
+  text-align: center;
+}
+
+#popup-body > div p:nth-child(3), #popup-body > div p:nth-child(4) {
+  text-align: right;
+}
+
+/* Estilos para el botón "cerrar" */
+#popup-header button {
+  cursor: pointer;
+  border: none;
+  background-color: #007bff; /* Color de texto azul para el botón */
+  color:#fff;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+#popup-header button:hover {
+  background-color: #007bffaa;
+}
+
+#popup-header button:active {
+  background-color: #007bff61;
+}

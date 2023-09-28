@@ -1,0 +1,31 @@
+/* #order-detail{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    border: 2px;
+    justify-content: space-between;
+    padding: 5px;
+    text-align: center;
+}
+
+#price{
+    padding: 0px 50px;
+    text-align: center;
+} */
+
+#order-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre cada elemento */
+  width: 200px; /* Tamaño fijo del contenedor */
+  background-color: #f0f0f0; /* Color de fondo opcional */
+  padding: 10px; /* Espacio alrededor del contenedor */
+}
+
+/* Estilos para cada elemento interno */
+#title, #price, #quantity, #subTotal {
+  font-size: 16px;
+  /* Otros estilos (color, fuente, etc.) según tus preferencias */
+}
+
+
