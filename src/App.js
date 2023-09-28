@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from '../src/Components/NavBar/NavBar'
 import Ordenar from './Pages/Order/Ordenar';
 import Product from './Pages/Product/Product';
-import Carrito from './Pages/Carrito/Carrito';
+import ProductAdder from './Pages/AddProduct/AddProduct.js';
 
  import Home from './Pages/Home/Inicio'
 import Historial from './Pages/Historial/Historial';
@@ -31,7 +31,7 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path="/ordenar" element={<Ordenar todayCount={todayCount}/>} />
         <Route path="/productos" element={<Product />} />
-        <Route path="/carrito" element={<Carrito />} />
+        <Route path="/agregarProduct" element={<ProductAdder />} />
         <Route path="/historial" element={<Historial />} />
       </Routes>
     </div>

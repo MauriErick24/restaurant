@@ -12,7 +12,7 @@ class Navbar extends Component{
         <div id="navegation">
           <a id="item" href="/">Inicio</a>
           <a id="item" href="/productos">Productos</a>
-          <a id="item" href="/carrito">Carrito</a>
+          <a id="item" href="/agregarProduct">Agregar producto</a>
         </div>
       </div>
     )

@@ -17,8 +17,6 @@ class Ordenar extends Component {
     };
   }
 
-  
-
 
   componentDidMount() {
     // Realiza la solicitud HTTP para obtener los datos de productos
@@ -75,7 +73,8 @@ class Ordenar extends Component {
     }
   }
 
-  //! Check this hard reload. It's getting the information from the database again.
+  ///// //! Check this hard reload. It's getting the information from the database again.
+  
 
   resetState = () => {
     window.location.reload();
