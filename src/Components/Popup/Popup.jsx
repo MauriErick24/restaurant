@@ -56,6 +56,7 @@ class Popup extends Component{
      }
 
     goBack = () => {
+      alert("Agregado correctamente")
       window.location.reload();
     }
 
