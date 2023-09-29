@@ -3,7 +3,7 @@ import './Popup.css'
 import ProductOrder from "../ProductOrder/ProductOrder";
 import axios from 'axios';
 
-
+const ADDRESS = '192.168.100.228';
 class Popup extends Component{
     state = {
         nombre: "",
@@ -66,7 +66,7 @@ class Popup extends Component{
         const { nombre, ci, total, products } = this.state
     
         try {
-          const response = await axios.post('http://localhost:5000/order/ticket', this.state);
+          const response = await axios.post(`http://${ADDRESS}:5000/order/ticket`, this.state);
           console.log('Respuesta del servidor:', response.data);
           this.setState({
             mensaje: 'Producto agregado exitosamente',

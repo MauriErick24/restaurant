@@ -2,7 +2,7 @@ import { Component } from "react";
  import ProductOrder from "../ProductOrder/ProductOrder";
  import './PopupDetail.css'
  import axios from "axios";
-
+ const ADDRESS = '192.168.100.228';
 class PopupDetail extends Component{
     constructor(props) {
         super(props);
@@ -17,7 +17,7 @@ class PopupDetail extends Component{
         const requestData = { idorder: this.state.idorder };
         console.log("requestData ", requestData)
         // Realiza la solicitud HTTP POST para obtener los datos de productos
-        axios.post('http://localhost:5000/history/id', requestData)
+        axios.post(`http://${ADDRESS}:5000/history/id`, requestData)
           .then(response => {
             this.setState({ productData: response.data }); // Actualiza el estado con los datos obtenidos
             console.log("Datos obtenidos correctamente");

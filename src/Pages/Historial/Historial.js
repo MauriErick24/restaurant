@@ -16,6 +16,10 @@ import axios from "axios";
 //     // {id: 4, client: 'cliente4', ci: 1234567890, ordersequence: 4, totalorder: 10, date: "2023-05-12"},
 //     // {id: 5, client: 'cliente5', ci: 1234567890, ordersequence: 5, totalorder: 15, date: "2023-05-12"},
 //   ];
+
+
+const ADDRESS = '192.168.100.228';
+
 class Historial extends Component {
   state = {
     cardsData: [],
@@ -23,7 +27,7 @@ class Historial extends Component {
 
   componentDidMount() {
     // Realiza la solicitud HTTP para obtener los datos de productos
-    axios.get('http://localhost:5000/history')
+    axios.get(`http://${ADDRESS}:5000/history`)
       .then(response => {
         this.setState({ cardsData: response.data }); // Actualiza el estado con los datos obtenidos
         console.log("Datos obtenidos correctamente");

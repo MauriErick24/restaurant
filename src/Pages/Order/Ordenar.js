@@ -5,6 +5,7 @@ import './Ordenar.css'
 import { useNavigate, useLocation } from 'react-router-dom';
 import Popup from "../../Components/Popup/Popup";
 
+const ADDRESS = '192.168.100.228';
 class Ordenar extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +21,7 @@ class Ordenar extends Component {
 
   componentDidMount() {
     // Realiza la solicitud HTTP para obtener los datos de productos
-    axios.get('http://localhost:5000/productos')
+    axios.get(`http://${ADDRESS}:5000/productos`)
       .then(response => {
         this.setState({ products: response.data }); // Actualiza el estado con los datos obtenidos
         console.log("Datos obtenidos correctamente");
