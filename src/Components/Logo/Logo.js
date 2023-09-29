@@ -5,6 +5,7 @@ const styles = {
         fontWeight: '700',
         fontSize: '2rem',
         cursor:'pointer',
+        padding: "10px"
     }
 }
 

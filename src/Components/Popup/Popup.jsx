@@ -25,8 +25,10 @@ class Popup extends Component{
         const total = this.props.products.reduce((acc, product) => {
           return acc + product.quantity * product.price;
         }, 0);
-    
-        this.setState({ total });
+        console.log(total)
+        const roundedTotal = total.toFixed(2);
+        console.log(roundedTotal)
+        this.setState({ total:roundedTotal });
       };
 
      setName = (value) =>{

@@ -9,7 +9,7 @@ import ProductAdder from './Pages/AddProduct/AddProduct.js';
 import Historial from './Pages/Historial/Historial';
 
 
-const restName = "Mi restaurante";
+const restName = "The king CHICKEN";
 // const cardsData = [
 //   { id: 1, title: 'MINI CHIKEN', content: '1 PRESA DE POLLO, PORCION DE PAPA' , price: 14},
 //   { id: 2, title: 'SUPER CHIKEN', content: '3 PRESAS DE POLLO, PORCION DE PAPA', price: 24 },

@@ -2,10 +2,12 @@
     align-items: center;
 }
 #order-button-space{
-    position: fixed; /* Hace que el Navbar sea fijo */
+    position:static; /* Hace que el Navbar sea fijo */
+    display: flex;
+    align-items: center;
     width: 100%; /* Ajusta el ancho al 100% del viewport */
     background-color: none; /* Estilo de fondo del Navbar */
-    padding: 10px 0; /* Espaciado interno superior e inferior */
+    padding: 50px 0; /* Espaciado interno superior e inferior */
     z-index: 1000; /* Z-index para asegurar que esté por encima de otros elementos */
     
     /* Otros estilos de diseño, como altura, alineación de texto, etc. */
@@ -16,7 +18,7 @@
     padding: 10px;
     border: none;
     font-size:x-large;
-    background-color: greenyellow;
+    background-color: rgb(139, 206, 40);
     width: 200px;
 }
 
@@ -59,5 +61,5 @@
   }
 
   h1{
-    padding-top: 70px;
+    padding-top: 0px;
   }
