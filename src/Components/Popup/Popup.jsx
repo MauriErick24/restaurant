@@ -9,7 +9,8 @@ class Popup extends Component{
         nombre: "",
         ci: 0,
         total: 0,
-        products: this.props.products
+        products: this.props.products,
+        currentDate: new Date(),
     }
 
     // totalPrice = (value) => {
@@ -49,10 +50,98 @@ class Popup extends Component{
             }
             console.log(this.state.products);
             console.log(this.state.total);
-            this.handleSubmitt()
+            // this.handleSubmitt()
             console.log(this.state)
             console.log(this.state.mensaje)
-            this.goBack()
+            // window.print()
+
+            // const formattedDate = `${this.state.currentDate.getFullYear()}-${(this.state.currentDate.getMonth() + 1).toString().padStart(2, '0')}-${this.state.currentDate.getDate().toString().padStart(2, '0')}`;
+
+          // Abre la ventana de impresión
+          const printWindow = window.open("", "_blank");
+          
+          // Coloca la lógica de impresión dentro de la ventana
+          if (printWindow) {
+            printWindow.document.write(`
+            <html>
+            <head>
+              <title>Imprimir</title>
+              <style>
+                /* Estilos CSS para la impresión */
+                body {
+                  font-family: Arial, sans-serif;
+                  font-size: 15px;
+                }
+                @media print {
+                  @page {
+                    size: 58mm 297mm; /* Tamaño A4 por ejemplo */
+                    margin: 0mm; /* Márgenes */
+                  }                
+                table {
+                  width: 40%;
+                  border-collapse: collapse;
+                  font-size: 10px;
+                }
+                th, td {
+                  border: 1px solid #dddddd;
+                  text-align: left;
+                  padding: 8px;
+                  font-size: 10px;
+                }
+                th {
+                  background-color: #f2f2f2;
+                }
+              </style>
+            </head>
+            <body>
+              <!-- Contenido que deseas imprimir -->
+              <h3>COMPROBANTE DE ORDEN</h3>
+              ------------------------------
+              <div>
+                <p>Nombre: ${this.state.nombre}</p>
+                <p>CI: ${this.state.ci}</p>
+              ------------------------------
+                <!-- Agrega aquí el contenido adicional que deseas imprimir -->
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Producto</th>
+                      <th>Cantidad</th>
+                      <th>Precio Unitario</th>
+                      <th>Subtotal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${this.state.products.map(product => `
+                      <tr>
+                        <td>${product.title}</td>
+                        <td>${product.quantity}</td>
+                        <td>${product.price}</td>
+                        <td>${product.quantity * product.price}</td>
+                      </tr>
+                    `).join('')}
+                  </tbody>
+                </table>
+                ------------------------------
+                <p>Total: ${this.state.total} </p>
+                ------------------------------
+                <p>Fecha: ${this.state.currentDate}</p>
+                ------------------------------
+                <h3>Gracias por su compra!</h3>
+              </div>
+            </body>
+          </html>
+            `);
+
+            // Cierra la ventana después de imprimir
+            printWindow.document.close();
+            printWindow.print();
+            printWindow.close();
+          } else {
+            alert("No se pudo abrir la ventana de impresión.");
+          }
+
+           // this.goBack()
         }
 
      }
